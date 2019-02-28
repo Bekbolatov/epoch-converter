@@ -1,9 +1,9 @@
 {
 	"manifest_version": 2,
 
-	"name": "Epoch Converter",
-	"description": "Provides a popup showing a human readable date of a highlighted Unix timestamp.",
-	"version": "1.0.2",
+	"name": "Unix Timestamp",
+	"description": "Provides a pop-up showing a human readable date of a highlighted Unix timestamp.",
+	"version": "1.0.4",
     
     "icons": { 
         "16": "icon.png",

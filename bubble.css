@@ -1,15 +1,14 @@
 #ec-bubble {
-    background-color: whitesmoke;
-    border: 2px solid darkgray;
-    border-radius: 4px;
-    box-shadow: 0 0 20px 5px #888;
+    background-color: #FF9900;
+    border: 2px solid #FF3300;
+    border-radius: 7px;
+    box-shadow: 0 0 15px 3px #888;
     font-family: arial, sans-serif;
     font-size: 10pt;
     left: 0;
-    padding: 7px;
+    padding: 5px;
     position: absolute;
     top: 0;
-    width: 200px;
     visibility: hidden;
     z-index: 10000;
 }

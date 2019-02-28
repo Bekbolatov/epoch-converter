@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('body').append('<div id=\"ec-bubble\"><pre id=\"ec-bubble-text\"></pre></div>');
+    $('body').append('<div id="ec-bubble"><div id="ec-bubble-text"></div></div>');
     
     $(document).click(function() {
         hideBubble();
@@ -10,11 +10,11 @@ $(document).ready(function() {
     });
 
 	$(document).dblclick(function(e) {
-		processSelection(e);
+       processSelection(e);
 	});
 	
 	$(document).bind('mouseup', function(e) {
-		processSelection(e);
+        processSelection(e);
 	});
 
 });
@@ -44,10 +44,15 @@ function getSelectedText() {
 }
 
 function convertTimestamp(ts) {
-    //ts = ts.length === 13 ? parseInt(ts) : ts * 1000;
+    ts = ts * 1000;
 	let date = new Date(ts).toString();
 	let index = /\d+:\d+:\d+/.exec(date).index;
-    return date.substring(0,index).trim()+"\n"+date.substring(index);
+    let u1 = date;
+
+    date = new Date(ts).toLocaleString("en-US", {timeZone: "America/Los_Angeles"})
+    let u2 = date;
+
+    return ['<font color="gray"><i>' + u1 + '</i></font><br><b>Seattle: ' + u2 + '</b>']
 }
 
 function showBubble(e, text) {
